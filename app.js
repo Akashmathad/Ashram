@@ -5,7 +5,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const studentRouter = require('./routes/studentRoutes');
 const userRouter = require('./routes/userRoutes');
-
+const compression = require('compression');
 
 const app = express();
 
@@ -20,6 +20,8 @@ app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   next();
 });
+
+app.use(compression());
 
 app.use('/api/students', studentRouter);
 app.use('/api/users', userRouter);
