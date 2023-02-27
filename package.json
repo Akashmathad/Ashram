@@ -1,0 +1,21 @@
+{
+  "name": "ashram",
+  "version": "1.0.0",
+  "description": "ashram database management system",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js"
+  },
+  "author": "Akash Mathad",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^5.13.16",
+    "morgan": "^1.10.0",
+    "slugify": "^1.6.5",
+    "validator": "^13.9.0"
+  }
+}
